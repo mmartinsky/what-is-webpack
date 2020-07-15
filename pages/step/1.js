@@ -26,7 +26,7 @@ export default function Step1(props) {
         At its core, a website is just plain HTML. The web browser parses this
         text and is responsible for rendering it*
       </p>
-      <p>Let's use a Rock Paper Scissors game as our example.</p>
+      <p>Let's use a skeleton for a Rock Paper Scissors game as our example.</p>
       <SyntaxHighlighter language="html" style={atomDark} showLineNumbers>
         {codeString}
       </SyntaxHighlighter>

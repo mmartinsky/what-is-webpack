@@ -23,7 +23,7 @@ export default function Step2(props) {
         border-radius: 3px;
         font-weight: bold;
         margin: 0.5rem 0;
-        padding: 1rem 2rem;
+        padding: 5px 10px;
         color: #fff;
     }
     button:hover {
@@ -42,6 +42,7 @@ export default function Step2(props) {
         background-color: #ee7411;
         border: 2px solid #ee7411;
     }
+  </style>
 </html>`;
   return (
     <div>
@@ -55,15 +56,14 @@ export default function Step2(props) {
       </SyntaxHighlighter>
       <iframe srcDoc={codeString} height={300} width={400} />
       <p>
-        Not very exciting, but it's a start. Let's add some styling to jazz it
-        up
+        Now it's looking a little better, but it's not very fun yet. Let's add
+        some interactivity.
       </p>
       <div>
-        <Link href="/step/2">
+        <Link href="/step/3">
           <button>Next</button>
         </Link>
       </div>
-      <aside>* This is how we get browser incompatibilities</aside>
     </div>
   );
 }
