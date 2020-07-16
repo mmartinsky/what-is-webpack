@@ -13,8 +13,9 @@ Pages
 3. JS - adding a script
 4. Code Splitting - put an unnecessary page in the script
 5. CSS Preprocessing - using LESS for nesting, mixins
-6. JSX - A nicer syntax
-7. Webpack - A bundler / transpiler build tool
-8. Configuration - entry, output
-9. Loaders - transpilation
-10. Plugins - flexibility
+6. React - enhancing reusability
+7. JSX - A nicer syntax
+8. Webpack - A bundler / transpiler build tool
+9. Configuration - entry, output
+10. Loaders - transpilation
+11. Plugins - flexibility
