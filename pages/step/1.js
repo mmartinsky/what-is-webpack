@@ -36,6 +36,9 @@ export default function Step1(props) {
         up
       </p>
       <div>
+        <Link href="/">
+          <button>Previous</button>
+        </Link>
         <Link href="/step/2">
           <button>Next</button>
         </Link>

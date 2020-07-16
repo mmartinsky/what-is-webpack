@@ -105,6 +105,9 @@ export default function Step3(props) {
         need to start splitting up these files.
       </p>
       <div>
+        <Link href="/step/2">
+          <button>Previous</button>
+        </Link>
         <Link href="/step/4">
           <button>Next</button>
         </Link>

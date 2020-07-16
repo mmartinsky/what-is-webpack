@@ -137,7 +137,10 @@ export default function Step4(props) {
         repetitive
       </p>
       <div>
-        <Link href="/step/4">
+        <Link href="/step/3">
+          <button>Previous</button>
+        </Link>
+        <Link href="/step/5">
           <button>Next</button>
         </Link>
       </div>

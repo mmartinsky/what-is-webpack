@@ -60,6 +60,9 @@ export default function Step2(props) {
         some interactivity.
       </p>
       <div>
+        <Link href="/step/1">
+          <button>Previous</button>
+        </Link>
         <Link href="/step/3">
           <button>Next</button>
         </Link>
