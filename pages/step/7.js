@@ -207,6 +207,11 @@ ReactDOM.render( /*#__PURE__*/React.createElement(App, null), document.getElemen
           {`<OptionButton name='X' onClick={setTicTacToeOption} />`}
         </SyntaxHighlighter>
       </p>
+      <p>
+        We've again added in a build step for our app, and we also now run the
+        risk of introducing extra code into our project that can slow down our
+        page load times.
+      </p>
       <div>
         <Link href="/step/6">
           <button>Previous</button>
