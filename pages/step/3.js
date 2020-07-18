@@ -4,21 +4,32 @@ import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Link from "next/link";
 
 export default function Step3(props) {
-  const codeString = `<html>
-  <body>
-    <h1>Play Rock Paper Scissors</h1>
-    <h3>Make a selection</h3>
-    <div>
-      <button id='rock'>Rock</button>
-      <button id='paper'>Paper</button>
-      <button id='scissors'>Scissors</button>
-    </div>
-    <h3>Opponent Selection</h3>
-    <div id='opponent-selection'></div>
-    <h2>Result</h2>
-    <div id='result'></div>
-  </body>
-  <script>
+  const cssString = `<style>
+  button {
+      border-radius: 3px;
+      font-weight: bold;
+      margin: 0.5rem 0;
+      padding: 5px 10px;
+      color: #fff;
+  }
+  button:hover {
+      cursor: pointer;
+      filter: brightness(1.2);
+  }
+  #rock {
+      background-color: #118bee;
+      border: 2px solid #118bee;
+  }
+  #paper {
+      background-color: #e311ee;
+      border: 2px solid #e311ee;
+  }
+  #scissors {
+      background-color: #ee7411;
+      border: 2px solid #ee7411;
+  }
+</style>`;
+  const jsString = `<script>
     function getRandomInt(max) {
       return Math.floor(Math.random() * Math.floor(max));
     }
@@ -62,32 +73,23 @@ export default function Step3(props) {
         }, 500);
       })
     });
-  </script>
-  <style>
-    button {
-        border-radius: 3px;
-        font-weight: bold;
-        margin: 0.5rem 0;
-        padding: 5px 10px;
-        color: #fff;
-    }
-    button:hover {
-        cursor: pointer;
-        filter: brightness(1.2);
-    }
-    #rock {
-        background-color: #118bee;
-        border: 2px solid #118bee;
-    }
-    #paper {
-        background-color: #e311ee;
-        border: 2px solid #e311ee;
-    }
-    #scissors {
-        background-color: #ee7411;
-        border: 2px solid #ee7411;
-    }
-  </style>
+  </script>`;
+  const codeString = `<html>
+  <body>
+    <h1>Play Rock Paper Scissors</h1>
+    <h3>Make a selection</h3>
+    <div>
+      <button id='rock'>Rock</button>
+      <button id='paper'>Paper</button>
+      <button id='scissors'>Scissors</button>
+    </div>
+    <h3>Opponent Selection</h3>
+    <div id='opponent-selection'></div>
+    <h2>Result</h2>
+    <div id='result'></div>
+  </body>
+  ${jsString}
+  ${cssString}
 </html>`;
   return (
     <div>
@@ -97,7 +99,7 @@ export default function Step3(props) {
         Javascript, we can add in some interactivity.
       </p>
       <SyntaxHighlighter language="html" style={atomDark} showLineNumbers>
-        {codeString}
+        {jsString}
       </SyntaxHighlighter>
       <iframe srcDoc={codeString} height={350} width={400} />
       <p>

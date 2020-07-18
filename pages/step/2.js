@@ -4,6 +4,31 @@ import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Link from "next/link";
 
 export default function Step2(props) {
+  const cssString = `<style>
+  button {
+      border-radius: 3px;
+      font-weight: bold;
+      margin: 0.5rem 0;
+      padding: 5px 10px;
+      color: #fff;
+  }
+  button:hover {
+      cursor: pointer;
+      filter: brightness(1.2);
+  }
+  #rock {
+      background-color: #118bee;
+      border: 2px solid #118bee;
+  }
+  #paper {
+      background-color: #e311ee;
+      border: 2px solid #e311ee;
+  }
+  #scissors {
+      background-color: #ee7411;
+      border: 2px solid #ee7411;
+  }
+</style>`;
   const codeString = `<html>
   <body>
     <h1>Play Rock Paper Scissors</h1>
@@ -18,31 +43,7 @@ export default function Step2(props) {
     <h2>Result</h2>
     <div id='result'></div>
   </body>
-  <style>
-    button {
-        border-radius: 3px;
-        font-weight: bold;
-        margin: 0.5rem 0;
-        padding: 5px 10px;
-        color: #fff;
-    }
-    button:hover {
-        cursor: pointer;
-        filter: brightness(1.2);
-    }
-    #rock {
-        background-color: #118bee;
-        border: 2px solid #118bee;
-    }
-    #paper {
-        background-color: #e311ee;
-        border: 2px solid #e311ee;
-    }
-    #scissors {
-        background-color: #ee7411;
-        border: 2px solid #ee7411;
-    }
-  </style>
+  ${cssString}
 </html>`;
   return (
     <div>
@@ -52,7 +53,7 @@ export default function Step2(props) {
         dethrone Fortnite.
       </p>
       <SyntaxHighlighter language="html" style={atomDark} showLineNumbers>
-        {codeString}
+        {cssString}
       </SyntaxHighlighter>
       <iframe srcDoc={codeString} height={300} width={400} />
       <p>

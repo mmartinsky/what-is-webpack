@@ -1,21 +1,22 @@
 # TODO
 
-- add tabs component for code editor
-- nest tabs component to show result in a tab
+- put folders in
 - style the app and add prev / next footer
-- create a table of contents on the side for easy navigation
+- create a fixed progress tracker for easy navigation
 - extract the above into a common layout
+- create SyntaxHighlighter wrapper, set max-height
 
 Pages
 
 1. Plain HTML
 2. CSS - adding styling
 3. JS - adding a script
-4. Code Splitting - put an unnecessary page in the script
-5. CSS Preprocessing - using LESS for nesting, mixins
-6. React - enhancing reusability
-7. JSX - A nicer syntax
-8. Webpack - A bundler / transpiler build tool
-9. Configuration - entry, output
-10. Loaders - transpilation
-11. Plugins - flexibility
+4. Splitting Files - cleanup
+5. Pause - this is a fully functioning app
+6. CSS Preprocessing - using LESS for nesting, mixins
+7. React / JSX - enhancing reusability
+8. Code Splitting - unecessary functions <--
+9. Webpack
+10. Configuration - entry, output
+11. Loaders - transpilation
+12. Plugins - flexibility
