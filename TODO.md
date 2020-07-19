@@ -15,7 +15,7 @@ Pages
 5. Pause - this is a fully functioning app
 6. CSS Preprocessing - using LESS for nesting, mixins
 7. React / JSX - enhancing reusability
-8. Code Splitting - unecessary functions <--
+8. Scoping
 9. Webpack
 10. Configuration - entry, output
 11. Loaders - transpilation

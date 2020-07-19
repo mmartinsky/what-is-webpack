@@ -6,10 +6,10 @@ export default function Step5(props) {
     <div>
       <h1>Taking a breather</h1>
       <p>
-        This is certainly fully functional, and in some cases a superior way to
-        build a website; frameworks like Angular can often seem like the only
-        option, but writing good, semantic HTML and using the full slate of CSS
-        can be pretty powerful.
+        This is certainly fully functional, and in some cases a more logical way
+        to build a simple informational site; frameworks like Angular can often
+        seem like the only option, but writing good, semantic HTML and using the
+        full slate of CSS can be pretty powerful.
       </p>
       <p>
         That said, there are some things that have been developed in recent
@@ -27,7 +27,7 @@ export default function Step5(props) {
           <a href="/step/7">React / JSX</a>
         </li>
         <li>
-          <a href="/step/8">Code Splitting</a>
+          <a href="/step/8">Scoping</a>
         </li>
       </ul>
       <div>
