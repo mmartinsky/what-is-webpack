@@ -56,7 +56,7 @@ export default function Step8(props) {
         <Link href="/step/7">
           <button>Previous</button>
         </Link>
-        <Link href="/step/8">
+        <Link href="/step/9">
           <button>Next</button>
         </Link>
       </div>

@@ -17,6 +17,6 @@ Pages
 7. React / JSX - enhancing reusability
 8. Scoping
 9. Webpack
-10. Configuration - entry, output
-11. Loaders - transpilation
-12. Plugins - flexibility
+10. Tree Shaking, Configuration - entry, output <-- Next
+11. Loaders - transpilation, JSX loader
+12. Plugins - flexibility, HTML Webpack plugin
