@@ -10,11 +10,15 @@
     "react-dom": "^16.13.1",
     "react-highlight.js": "^1.0.7",
     "react-syntax-highlighter": "^12.2.1",
-    "react-tabs": "^3.1.1"
+    "react-tabs": "^3.1.1",
+    "webpack": "^4.43.0"
   },
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.12"
   }
 }
