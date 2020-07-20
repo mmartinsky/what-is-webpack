@@ -88,8 +88,8 @@ export function cube(x) {
         JavaScript interpreter.
       </p>
       <p>
-        Passing the following index.js into Webpack results in the output in
-        bundle.js
+        Running the <code>webpack</code> command on the following directory
+        results in the bundle.js file.
       </p>
       <Tabs>
         <TabList>
@@ -135,8 +135,8 @@ export function cube(x) {
       <p>
         We've shown now that we can write our code using modern JavaScript
         syntax (importing from modules), and have it output into a chunk of code
-        that is compatible with any browser. But where did the square function
-        go?
+        that is compatible with any browser. But how did Webpack know which file
+        to start with - and where did the square function go?
       </p>
       <div>
         <Link href="/step/8">
