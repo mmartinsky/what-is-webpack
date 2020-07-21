@@ -17,7 +17,7 @@ export default function CodeViewer(props) {
         <TabPanel key={"code-" + i}>
           <SyntaxHighlighter
             language={tab.lang}
-            customStyle={{ height: height || "auto" }}
+            customStyle={{ height: height }}
             style={atomDark}
             showLineNumbers
           >
@@ -28,3 +28,6 @@ export default function CodeViewer(props) {
     </Tabs>
   );
 }
+CodeViewer.defaultProps = {
+  height: "400px",
+};

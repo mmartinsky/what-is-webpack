@@ -3,6 +3,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Link from "next/link";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import CodeViewer from "../../src/components/CodeViewer";
 
 export default function Step10(props) {
   const configCodeString = `const path = require("path"); // import a utility for file traversal
@@ -28,6 +29,9 @@ module.exports = {
     minimize: false
   }
 };`;
+  const tabs = [
+    { name: "webpack.config.js", lang: "js", code: configCodeString },
+  ];
 
   return (
     <div>
@@ -44,20 +48,7 @@ module.exports = {
         output to be named differently, or end up in a specific file location?
         Below is a sample config file, annotated with the purpose of each block:
       </p>
-      <Tabs>
-        <TabList>
-          <Tab>webpack.config.js</Tab>
-        </TabList>
-        <TabPanel>
-          <SyntaxHighlighter
-            language="javascript"
-            style={atomDark}
-            showLineNumbers
-          >
-            {configCodeString}
-          </SyntaxHighlighter>
-        </TabPanel>
-      </Tabs>
+      <CodeViewer tabs={tabs} />
       <p>
         With hundreds of options, you can tweak and customize the bundling to
         your heart's desire. Best of all, because the configuration is

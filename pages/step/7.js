@@ -3,6 +3,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Link from "next/link";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import CodeViewer from "../../src/components/CodeViewer";
 
 export default function Step7(props) {
   const pureJsCodeString = `const React = require('react');
@@ -145,6 +146,11 @@ function App() {
 
 
 ReactDOM.render( /*#__PURE__*/React.createElement(App, null), document.getElementById('root'));`;
+  const tabs = [
+    { name: "index-with-react.js", lang: "js", code: pureJsCodeString },
+    { name: "index-with-jsx.jsx", lang: "jsx", code: jsxCodeString },
+    { name: "compiled.js", lang: "js", code: compiledJs },
+  ];
   return (
     <div>
       <h1>React and JSX</h1>
@@ -159,11 +165,11 @@ ReactDOM.render( /*#__PURE__*/React.createElement(App, null), document.getElemen
       </p>
       <p>
         While each have their own idiosyncracies, all are primarily used to
-        build single page applications, relying on the concept of components and
-        a virtual DOM, in which the framework tracks the state of the
-        application and can selectively re-render only the portions that need
-        updating. In contrast, each time you navigate to a new page on this site
-        (built using Next.js), it triggers a full page reload.
+        build single page applications. Using a virtual DOM, the framework
+        tracks the state of the application and can selectively re-render only
+        the portions that need updating. In contrast, each time you navigate to
+        a new page on this site (built using Next.js), it triggers a full page
+        reload.
       </p>
       <p>
         Each of the below files is equivalent functionally - the first is using
@@ -174,32 +180,7 @@ ReactDOM.render( /*#__PURE__*/React.createElement(App, null), document.getElemen
         the transpiled version - using a build step, the JSX gets converted into
         plain Javascript for the browser.
       </p>
-      <Tabs>
-        <TabList>
-          <Tab>index-with-react.js</Tab>
-          <Tab>index-with-jsx.js</Tab>
-          <Tab>compiled.js</Tab>
-        </TabList>
-        <TabPanel>
-          <SyntaxHighlighter language="js" style={atomDark} showLineNumbers>
-            {pureJsCodeString}
-          </SyntaxHighlighter>
-        </TabPanel>
-        <TabPanel>
-          <SyntaxHighlighter language="jsx" style={atomDark} showLineNumbers>
-            {jsxCodeString}
-          </SyntaxHighlighter>
-        </TabPanel>
-        <TabPanel>
-          <SyntaxHighlighter
-            language="javascript"
-            style={atomDark}
-            showLineNumbers
-          >
-            {compiledJs}
-          </SyntaxHighlighter>
-        </TabPanel>
-      </Tabs>
+      <CodeViewer tabs={tabs} height="400px" />
       <p>
         Now, when we want to add a button into our new Tic Tac Toe game, we can
         just add:

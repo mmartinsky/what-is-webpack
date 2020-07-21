@@ -100,7 +100,7 @@ export default function Step3(props) {
         Buttons that don't do anything aren't particularly fun. Using
         Javascript, we can add in some interactivity.
       </p>
-      <CodeViewer tabs={tabs} height={"400px"} />
+      <CodeViewer tabs={tabs} />
       <iframe srcDoc={codeString} height={350} width={400} />
       <p>
         We have a playable MVP! It's starting to get a bit unwieldy, so we'll

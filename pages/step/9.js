@@ -3,6 +3,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Link from "next/link";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import CodeViewer from "../../src/components/CodeViewer";
 
 export default function Step9(props) {
   const indexJsCodeString = `import { cube } from "./math";
@@ -77,6 +78,11 @@ export function cube(x) {
   },
 ]);
   `;
+  const tabs = [
+    { name: "index.js", lang: "js", code: indexJsCodeString },
+    { name: "math.js", lang: "js", code: mathJsCodeString },
+    { name: "main.js", lang: "js", code: bundleJsCodeString },
+  ];
   return (
     <div>
       <h1>Webpack</h1>
@@ -89,42 +95,9 @@ export function cube(x) {
       </p>
       <p>
         Running the <code>webpack</code> command on the following directory
-        results in the bundle.js file.
+        results in the main.js file.
       </p>
-      <Tabs>
-        <TabList>
-          <Tab>index.js</Tab>
-          <Tab>math.js</Tab>
-          <Tab>bundle.js</Tab>
-        </TabList>
-        <TabPanel>
-          <SyntaxHighlighter
-            language="javascript"
-            style={atomDark}
-            showLineNumbers
-          >
-            {indexJsCodeString}
-          </SyntaxHighlighter>
-        </TabPanel>
-        <TabPanel>
-          <SyntaxHighlighter
-            language="javascript"
-            style={atomDark}
-            showLineNumbers
-          >
-            {mathJsCodeString}
-          </SyntaxHighlighter>
-        </TabPanel>
-        <TabPanel>
-          <SyntaxHighlighter
-            language="javascript"
-            style={atomDark}
-            showLineNumbers
-          >
-            {bundleJsCodeString}
-          </SyntaxHighlighter>
-        </TabPanel>
-      </Tabs>
+      <CodeViewer tabs={tabs} />
       <p>
         It's certainly not recognizable until the very end - you can see our
         cube function listed at the bottom, underneath a lot of minified code.

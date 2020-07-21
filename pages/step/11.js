@@ -3,6 +3,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Link from "next/link";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import CodeViewer from "../../src/components/CodeViewer";
 
 export default function Step11(props) {
   const indexJsCodeString = `import { cube } from "./math";
@@ -191,6 +192,12 @@ export function cube(x) {
   /***/ })
 
   /******/ });`;
+  const tabs = [
+    { name: "index.js", lang: "js", code: indexJsCodeString },
+    { name: "math.js", lang: "js", code: mathJsCodeString },
+    { name: "prod-bundle.js", lang: "js", code: bundleJsCodeString },
+    { name: "development-bundle.js", lang: "js", code: developmentCodeString },
+  ];
   return (
     <div>
       <h1>Tree Shaking and Code Splitting</h1>
@@ -206,50 +213,7 @@ export function cube(x) {
         dependency graph. If we instead run Webpack in development mode,{" "}
         <code>webpack --mode development</code> tree shaking will be disabled.
       </p>
-      <Tabs>
-        <TabList>
-          <Tab>index.js</Tab>
-          <Tab>math.js</Tab>
-          <Tab>prod-bundle.js</Tab>
-          <Tab>development-bundle.js</Tab>
-        </TabList>
-        <TabPanel>
-          <SyntaxHighlighter
-            language="javascript"
-            style={atomDark}
-            showLineNumbers
-          >
-            {indexJsCodeString}
-          </SyntaxHighlighter>
-        </TabPanel>
-        <TabPanel>
-          <SyntaxHighlighter
-            language="javascript"
-            style={atomDark}
-            showLineNumbers
-          >
-            {mathJsCodeString}
-          </SyntaxHighlighter>
-        </TabPanel>
-        <TabPanel>
-          <SyntaxHighlighter
-            language="javascript"
-            style={atomDark}
-            showLineNumbers
-          >
-            {bundleJsCodeString}
-          </SyntaxHighlighter>
-        </TabPanel>
-        <TabPanel>
-          <SyntaxHighlighter
-            language="javascript"
-            style={atomDark}
-            showLineNumbers
-          >
-            {developmentCodeString}
-          </SyntaxHighlighter>
-        </TabPanel>
-      </Tabs>
+      <CodeViewer tabs={tabs} />
       <p>
         A common optimization is to use multiple entrypoints or dynamic imports
         to create separate bundles for each portion of your app - if only one

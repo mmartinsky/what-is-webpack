@@ -121,7 +121,7 @@ button:hover {
         other mixins! In a toy example like below, the savings are minimal, but
         you can start to see significant benefits in larger applications.
       </p>
-      <CodeViewer tabs={tabs} height={"400px"} />
+      <CodeViewer tabs={tabs} />
       <p>
         Now, when we want to sell the options Lizard and Spock as pay to win
         downloadable content, all we'd have to do is add

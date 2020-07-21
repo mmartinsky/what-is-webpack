@@ -108,7 +108,7 @@ choices.forEach(function (choice) {
         Splitting our files makes it easier to deal with each in isolation, as
         well as making them more portable.
       </p>
-      <CodeViewer tabs={tabs} height={"400px"} />
+      <CodeViewer tabs={tabs} />
       <iframe srcDoc={combinedString} height={350} width={400} />
       <p>
         Now our files are a bit more spread out, and should make interacting

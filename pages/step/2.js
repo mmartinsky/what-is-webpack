@@ -54,7 +54,7 @@ export default function Step2(props) {
         We can begin to add some styling to hook the players in our quest to
         dethrone Minecraft.
       </p>
-      <CodeViewer tabs={tabs} height={"400px"} />
+      <CodeViewer tabs={tabs} />
       <iframe srcDoc={codeString} height={300} width={400} />
       <p>
         Now it's looking a little better, but it's not very fun yet. Let's add

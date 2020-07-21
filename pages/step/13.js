@@ -3,6 +3,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Link from "next/link";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import CodeViewer from "../../src/components/CodeViewer";
 
 export default function Step13(props) {
   const loaderConfigCodeString = `const HtmlWebpackPlugin = require('html-webpack-plugin'; //installed via npm
@@ -32,6 +33,9 @@ module.exports = {
     new BundleAnalyzerPlugin()
   ]
 }; `;
+  const tabs = [
+    { name: "webpack.config.js", lang: "js", code: loaderConfigCodeString },
+  ];
   return (
     <div>
       <h1>Plugins</h1>
@@ -41,20 +45,7 @@ module.exports = {
         behind the scenes. Below, we'll run through a sample plugin
         configuration with a few interesting / useful highlights.
       </p>
-      <Tabs>
-        <TabList>
-          <Tab>webpack.config.js</Tab>
-        </TabList>
-        <TabPanel>
-          <SyntaxHighlighter
-            language="javascript"
-            style={atomDark}
-            showLineNumbers
-          >
-            {loaderConfigCodeString}
-          </SyntaxHighlighter>
-        </TabPanel>
-      </Tabs>
+      <CodeViewer tabs={tabs} />
       <p>
         The BundleAnalyzerPlugin in particular is a great example of a plugin
         that doesn't directly modify code, but allows you to visualize and

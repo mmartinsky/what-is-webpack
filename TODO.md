@@ -4,7 +4,6 @@
 - style the app and add prev / next footer
 - create a fixed progress tracker for easy navigation
 - extract the above into a common layout
-- create SyntaxHighlighter wrapper, set max-height
 
 Pages
 

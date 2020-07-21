@@ -3,6 +3,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Link from "next/link";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import CodeViewer from "../../src/components/CodeViewer";
 
 export default function Step8(props) {
   const htmlCodeString = `<html>
@@ -17,6 +18,7 @@ export default function Step8(props) {
     <link rel="stylesheet" href="./index.css" />
   </head>
 </html>`;
+  const tabs = [{ name: "index.html", lang: "html", code: htmlCodeString }];
   return (
     <div>
       <h1>Global Scope</h1>
@@ -29,17 +31,7 @@ export default function Step8(props) {
         index.js script goes to use React, it will get our useless function
         instead of the necessary imported one!
       </p>
-
-      <Tabs>
-        <TabList>
-          <Tab>index.html</Tab>
-        </TabList>
-        <TabPanel>
-          <SyntaxHighlighter language="html" style={atomDark} showLineNumbers>
-            {htmlCodeString}
-          </SyntaxHighlighter>
-        </TabPanel>
-      </Tabs>
+      <CodeViewer tabs={tabs} />
       <p>
         This may seem extreme, and React is well known enough that there would
         be a low risk of this occuring. But with thousands of packages in a

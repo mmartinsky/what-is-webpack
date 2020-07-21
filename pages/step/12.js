@@ -3,6 +3,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Link from "next/link";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import CodeViewer from "../../src/components/CodeViewer";
 
 export default function Step12(props) {
   const loaderConfigCodeString = ` const path = require('path');
@@ -43,6 +44,10 @@ module.exports = {
   },
 };
   `;
+  const tabs = [
+    { name: "webpack.config.js", lang: "js", code: loaderConfigCodeString },
+  ];
+
   return (
     <div>
       <h1>Loaders</h1>
@@ -55,20 +60,7 @@ module.exports = {
         even loaders that allow you to import SVG images as first class React
         components.
       </p>
-      <Tabs>
-        <TabList>
-          <Tab>webpack.config.js</Tab>
-        </TabList>
-        <TabPanel>
-          <SyntaxHighlighter
-            language="javascript"
-            style={atomDark}
-            showLineNumbers
-          >
-            {loaderConfigCodeString}
-          </SyntaxHighlighter>
-        </TabPanel>
-      </Tabs>
+      <CodeViewer tabs={tabs} />
       <p>
         One interesting thing to note is the precedence order of the loaders
         used in a given rule - it works from right to left, meaning that{" "}
