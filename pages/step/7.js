@@ -193,14 +193,6 @@ ReactDOM.render( /*#__PURE__*/React.createElement(App, null), document.getElemen
         risk of introducing extra code into our project that can slow down our
         page load times.
       </p>
-      <div>
-        <Link href="/step/6">
-          <button>Previous</button>
-        </Link>
-        <Link href="/step/8">
-          <button>Next</button>
-        </Link>
-      </div>
     </div>
   );
 }

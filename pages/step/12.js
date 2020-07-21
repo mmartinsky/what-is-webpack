@@ -67,14 +67,6 @@ module.exports = {
         <code>['style-loader', 'css-loader']</code> is equivalent to{" "}
         <code>style-loader(css-loader(file))</code>
       </p>
-      <div>
-        <Link href="/step/11">
-          <button>Previous</button>
-        </Link>
-        <Link href="/step/13">
-          <button>Next</button>
-        </Link>
-      </div>
     </div>
   );
 }

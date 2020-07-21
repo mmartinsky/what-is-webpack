@@ -111,14 +111,6 @@ export function cube(x) {
         that is compatible with any browser. But how did Webpack know which file
         to start with - and where did the square function go?
       </p>
-      <div>
-        <Link href="/step/8">
-          <button>Previous</button>
-        </Link>
-        <Link href="/step/10">
-          <button>Next</button>
-        </Link>
-      </div>
     </div>
   );
 }

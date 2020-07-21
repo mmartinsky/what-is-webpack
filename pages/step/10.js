@@ -55,14 +55,6 @@ module.exports = {
         JavaScript code rather than a static JSON file, you can use dynamic
         logic and even compose multiple webpack configs together.
       </p>
-      <div>
-        <Link href="/step/9">
-          <button>Previous</button>
-        </Link>
-        <Link href="/step/11">
-          <button>Next</button>
-        </Link>
-      </div>
     </div>
   );
 }

@@ -30,14 +30,6 @@ export default function Step5(props) {
           <a href="/step/8">Scoping</a>
         </li>
       </ul>
-      <div>
-        <Link href="/step/4">
-          <button>Previous</button>
-        </Link>
-        <Link href="/step/6">
-          <button>Next</button>
-        </Link>
-      </div>
     </div>
   );
 }

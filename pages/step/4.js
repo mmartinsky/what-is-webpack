@@ -1,9 +1,7 @@
 import React from "react";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Link from "next/link";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import CodeViewer from "../../src/components/CodeViewer";
+import { Content, Iframe } from "../../src/components/Styled";
 
 export default function Step4(props) {
   const htmlCodeString = `<html>
@@ -108,20 +106,14 @@ choices.forEach(function (choice) {
         Splitting our files makes it easier to deal with each in isolation, as
         well as making them more portable.
       </p>
-      <CodeViewer tabs={tabs} />
-      <iframe srcDoc={combinedString} height={350} width={400} />
+      <Content>
+        <CodeViewer tabs={tabs} />
+        <Iframe srcDoc={combinedString} height={400} width="100%" />
+      </Content>
       <p>
         Now our files are a bit more spread out, and should make interacting
         with each much easier.
       </p>
-      <div>
-        <Link href="/step/3">
-          <button>Previous</button>
-        </Link>
-        <Link href="/step/5">
-          <button>Next</button>
-        </Link>
-      </div>
     </div>
   );
 }

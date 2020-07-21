@@ -31,7 +31,7 @@ export default function Step8(props) {
         index.js script goes to use React, it will get our useless function
         instead of the necessary imported one!
       </p>
-      <CodeViewer tabs={tabs} />
+      <CodeViewer tabs={tabs} height="300px" />
       <p>
         This may seem extreme, and React is well known enough that there would
         be a low risk of this occuring. But with thousands of packages in a
@@ -44,14 +44,6 @@ export default function Step8(props) {
  // some code for your module
 }());`}
       </SyntaxHighlighter>
-      <div>
-        <Link href="/step/7">
-          <button>Previous</button>
-        </Link>
-        <Link href="/step/9">
-          <button>Next</button>
-        </Link>
-      </div>
     </div>
   );
 }

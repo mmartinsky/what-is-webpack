@@ -1,5 +1,5 @@
 body {
-  width: min(calc(100% - 80px), 1000px);
+  width: min(calc(100% - 40px), 1200px);
   margin: 20px auto !important;
 }
 

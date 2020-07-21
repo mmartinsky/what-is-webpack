@@ -1,8 +1,7 @@
 import React from "react";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Link from "next/link";
 import CodeViewer from "../../src/components/CodeViewer";
+import { Content, Iframe } from "../../src/components/Styled";
 
 export default function Step2(props) {
   const cssString = `<style>
@@ -54,20 +53,14 @@ export default function Step2(props) {
         We can begin to add some styling to hook the players in our quest to
         dethrone Minecraft.
       </p>
-      <CodeViewer tabs={tabs} />
-      <iframe srcDoc={codeString} height={300} width={400} />
+      <Content>
+        <CodeViewer tabs={tabs} />
+        <Iframe srcDoc={codeString} height={400} width="100%" />
+      </Content>
       <p>
         Now it's looking a little better, but it's not very fun yet. Let's add
         some interactivity.
       </p>
-      <div>
-        <Link href="/step/1">
-          <button>Previous</button>
-        </Link>
-        <Link href="/step/3">
-          <button>Next</button>
-        </Link>
-      </div>
     </div>
   );
 }

@@ -33,12 +33,8 @@ export default function MyApp({ Component, pageProps }) {
       <Stepper alternativeLabel activeStep={+pageNum - 1}>
         {steps.map((step, i) => {
           return (
-            <Step
-              key={step}
-              onClick={() => router.push(`/step/${i + 1}`)}
-              style={{ cursor: "pointer" }}
-            >
-              <StepLabel>{step}</StepLabel>
+            <Step key={step} onClick={() => router.push(`/step/${i + 1}`)}>
+              <StepLabel style={{ cursor: "pointer" }}>{step}</StepLabel>
             </Step>
           );
         })}

@@ -1,8 +1,7 @@
 import React from "react";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Link from "next/link";
 import CodeViewer from "../../src/components/CodeViewer";
+import { Content, Iframe } from "../../src/components/Styled";
 
 export default function Step3(props) {
   const cssString = `<style>
@@ -100,20 +99,14 @@ export default function Step3(props) {
         Buttons that don't do anything aren't particularly fun. Using
         Javascript, we can add in some interactivity.
       </p>
-      <CodeViewer tabs={tabs} />
-      <iframe srcDoc={codeString} height={350} width={400} />
+      <Content>
+        <CodeViewer tabs={tabs} />
+        <Iframe srcDoc={codeString} height={400} width="100%" />
+      </Content>
       <p>
         We have a playable MVP! It's starting to get a bit unwieldy, so we'll
         need to start splitting up these files.
       </p>
-      <div>
-        <Link href="/step/2">
-          <button>Previous</button>
-        </Link>
-        <Link href="/step/4">
-          <button>Next</button>
-        </Link>
-      </div>
     </div>
   );
 }

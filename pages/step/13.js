@@ -53,14 +53,6 @@ module.exports = {
         of your app.
       </p>
       <img src="https://cloud.githubusercontent.com/assets/302213/20628702/93f72404-b338-11e6-92d4-9a365550a701.gif" />
-      <div>
-        <Link href="/step/12">
-          <button>Previous</button>
-        </Link>
-        <Link href="/recap">
-          <button>Next</button>
-        </Link>
-      </div>
     </div>
   );
 }

@@ -142,14 +142,6 @@ button:hover {
       <p>
         It would certainly be nice to have a way to automate this process...
       </p>
-      <div>
-        <Link href="/step/5">
-          <button>Previous</button>
-        </Link>
-        <Link href="/step/7">
-          <button>Next</button>
-        </Link>
-      </div>
     </div>
   );
 }

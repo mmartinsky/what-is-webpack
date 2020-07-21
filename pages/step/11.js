@@ -220,14 +220,6 @@ export function cube(x) {
         page uses a heavy dependency like ag-grid or a charting library, you can
         defer loading of that dependency until that portion is requested.
       </p>
-      <div>
-        <Link href="/step/10">
-          <button>Previous</button>
-        </Link>
-        <Link href="/step/12">
-          <button>Next</button>
-        </Link>
-      </div>
     </div>
   );
 }

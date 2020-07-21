@@ -1,8 +1,7 @@
 import React from "react";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Link from "next/link";
 import CodeViewer from "../../src/components/CodeViewer";
+import { Content, Iframe } from "../../src/components/Styled";
 
 export default function Step1(props) {
   const codeString = `<html>
@@ -29,20 +28,14 @@ export default function Step1(props) {
         text and is responsible for rendering it. Let's use a skeleton for a
         Rock Paper Scissors game as our example.
       </p>
-      <CodeViewer tabs={tabs} />
-      <iframe srcDoc={codeString} height={300} width={400} />
+      <Content>
+        <CodeViewer tabs={tabs} />
+        <Iframe srcDoc={codeString} height={400} width="100%" />
+      </Content>
       <p>
         Not very exciting, but it's a start. Let's add some styling to jazz it
         up
       </p>
-      <div>
-        <Link href="/">
-          <button>Previous</button>
-        </Link>
-        <Link href="/step/2">
-          <button>Next</button>
-        </Link>
-      </div>
     </div>
   );
 }
