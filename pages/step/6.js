@@ -3,6 +3,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Link from "next/link";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import CodeViewer from "../../src/components/CodeViewer";
 
 export default function Step6(props) {
   const cssCodeString = `button {
@@ -97,6 +98,11 @@ button:hover {
   filter: brightness(1.2);
 }
 `;
+  const tabs = [
+    { name: "starting.css", lang: "css", code: cssCodeString },
+    { name: "index.less", lang: "less", code: lessCodeString },
+    { name: "compiled-index.css", lang: "css", code: compiledCodeString },
+  ];
   return (
     <div>
       <h1>CSS Preprocessing</h1>
@@ -115,28 +121,7 @@ button:hover {
         other mixins! In a toy example like below, the savings are minimal, but
         you can start to see significant benefits in larger applications.
       </p>
-      <Tabs defaultIndex={1}>
-        <TabList>
-          <Tab>starting.css</Tab>
-          <Tab>index.less</Tab>
-          <Tab>compiled-index.css</Tab>
-        </TabList>
-        <TabPanel>
-          <SyntaxHighlighter language="css" style={atomDark} showLineNumbers>
-            {cssCodeString}
-          </SyntaxHighlighter>
-        </TabPanel>
-        <TabPanel>
-          <SyntaxHighlighter language="css" style={atomDark} showLineNumbers>
-            {lessCodeString}
-          </SyntaxHighlighter>
-        </TabPanel>
-        <TabPanel>
-          <SyntaxHighlighter language="css" style={atomDark} showLineNumbers>
-            {compiledCodeString}
-          </SyntaxHighlighter>
-        </TabPanel>
-      </Tabs>
+      <CodeViewer tabs={tabs} height={"400px"} />
       <p>
         Now, when we want to sell the options Lizard and Spock as pay to win
         downloadable content, all we'd have to do is add

@@ -2,6 +2,7 @@ import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Link from "next/link";
+import CodeViewer from "../../src/components/CodeViewer";
 
 export default function Step2(props) {
   const cssString = `<style>
@@ -31,7 +32,7 @@ export default function Step2(props) {
 </style>`;
   const codeString = `<html>
   <body>
-    <h1>Play Rock Paper Scissors</h1>
+    <h2>Play Rock Paper Scissors</h2>
     <h3>Make a selection</h3>
     <div>
       <button id='rock'>Rock</button>
@@ -45,16 +46,15 @@ export default function Step2(props) {
   </body>
   ${cssString}
 </html>`;
+  const tabs = [{ name: "index.html", lang: "html", code: codeString }];
   return (
     <div>
       <h1>HTML + CSS</h1>
       <p>
         We can begin to add some styling to hook the players in our quest to
-        dethrone Fortnite.
+        dethrone Minecraft.
       </p>
-      <SyntaxHighlighter language="html" style={atomDark} showLineNumbers>
-        {cssString}
-      </SyntaxHighlighter>
+      <CodeViewer tabs={tabs} height={"400px"} />
       <iframe srcDoc={codeString} height={300} width={400} />
       <p>
         Now it's looking a little better, but it's not very fun yet. Let's add

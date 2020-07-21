@@ -3,6 +3,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Link from "next/link";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import CodeViewer from "../../src/components/CodeViewer";
 
 export default function Step4(props) {
   const htmlCodeString = `<html>
@@ -95,7 +96,11 @@ choices.forEach(function (choice) {
 `;
   const splitHtmlString = htmlCodeString.split("</html>");
   const combinedString = `${splitHtmlString[0]}<style>${cssCodeString}</style><script>${jsCodeString}</script>${splitHtmlString[1]}`;
-
+  const tabs = [
+    { name: "index.html", lang: "html", code: htmlCodeString },
+    { name: "index.css", lang: "css", code: cssCodeString },
+    { name: "index.js", lang: "js", code: jsCodeString },
+  ];
   return (
     <div>
       <h1>File Splitting</h1>
@@ -103,34 +108,7 @@ choices.forEach(function (choice) {
         Splitting our files makes it easier to deal with each in isolation, as
         well as making them more portable.
       </p>
-      <Tabs>
-        <TabList>
-          <Tab>index.html</Tab>
-          <Tab>index.css</Tab>
-          <Tab>index.js</Tab>
-        </TabList>
-
-        <TabPanel>
-          <SyntaxHighlighter language="html" style={atomDark} showLineNumbers>
-            {htmlCodeString}
-          </SyntaxHighlighter>
-        </TabPanel>
-        <TabPanel>
-          <SyntaxHighlighter language="css" style={atomDark} showLineNumbers>
-            {cssCodeString}
-          </SyntaxHighlighter>
-        </TabPanel>
-        <TabPanel>
-          <SyntaxHighlighter
-            language="javascript"
-            style={atomDark}
-            showLineNumbers
-          >
-            {jsCodeString}
-          </SyntaxHighlighter>
-        </TabPanel>
-      </Tabs>
-
+      <CodeViewer tabs={tabs} height={"400px"} />
       <iframe srcDoc={combinedString} height={350} width={400} />
       <p>
         Now our files are a bit more spread out, and should make interacting
