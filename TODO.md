@@ -19,5 +19,6 @@ Pages
 9. Webpack
 10. Configuration - entry, output
 11. Tree Shaking
-12. Loaders - transpilation, JSX loader <--
+12. Loaders - transpilation, JSX loader
 13. Plugins - flexibility, HTML Webpack plugin
+14. Recap <<<>>>
