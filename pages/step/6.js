@@ -135,9 +135,11 @@ button:hover {
         This is cool, but now we're going to need a build step - the browser
         can't understand LESS syntax, so we need to compile it down to CSS, and
         then re-compile it on every change with a command like:
-        <SyntaxHighlighter language="bash" style={atomDark} showLineNumbers>
-          {"lessc index.less index.css"}
-        </SyntaxHighlighter>
+      </p>
+      <SyntaxHighlighter language="bash" style={atomDark} showLineNumbers>
+        {"lessc index.less index.css"}
+      </SyntaxHighlighter>
+      <p>
         It would certainly be nice to have a way to automate this process...
       </p>
       <div>
