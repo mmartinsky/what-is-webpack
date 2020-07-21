@@ -40,7 +40,7 @@ export default function Step2(props) {
       <button id='scissors'>Scissors</button>
     </div>
     <h3>Opponent Selection</h3>
-    <div id='opponent-selection'></div>
+    <div id='opponent-selection'>Make a Selection</div>
     <h2>Result</h2>
     <div id='result'></div>
   </body>
@@ -49,7 +49,7 @@ export default function Step2(props) {
   const tabs = [{ name: "index.html", lang: "html", code: codeString }];
   return (
     <div>
-      <h1>HTML + CSS</h1>
+      <h2>HTML + CSS</h2>
       <p>
         We can begin to add some styling to hook the players in our quest to
         dethrone Minecraft.

@@ -15,7 +15,7 @@ export default function Step1(props) {
       <button id='scissors'>Scissors</button>
     </div>
     <h3>Opponent Selection</h3>
-    <div id='opponent-selection'></div>
+    <div id='opponent-selection'>Make a Selection</div>
     <h2>Result</h2>
     <div id='result'></div>
   </body>
@@ -30,7 +30,7 @@ export default function Step1(props) {
         Rock Paper Scissors game as our example.
       </p>
       <CodeViewer tabs={tabs} />
-      <iframe srcDoc={codeString} height={250} width={400} />
+      <iframe srcDoc={codeString} height={300} width={400} />
       <p>
         Not very exciting, but it's a start. Let's add some styling to jazz it
         up

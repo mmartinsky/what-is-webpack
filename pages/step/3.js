@@ -77,7 +77,7 @@ export default function Step3(props) {
   </script>`;
   const codeString = `<html>
   <body>
-    <h1>Play Rock Paper Scissors</h1>
+    <h2>Play Rock Paper Scissors</h2>
     <h3>Make a selection</h3>
     <div>
       <button id='rock'>Rock</button>
@@ -85,7 +85,7 @@ export default function Step3(props) {
       <button id='scissors'>Scissors</button>
     </div>
     <h3>Opponent Selection</h3>
-    <div id='opponent-selection'></div>
+    <div id='opponent-selection'>Make a Selection</div>
     <h2>Result</h2>
     <div id='result'></div>
   </body>
@@ -95,7 +95,7 @@ export default function Step3(props) {
   const tabs = [{ name: "index.html", lang: "html", code: codeString }];
   return (
     <div>
-      <h1>Adding Interactivity</h1>
+      <h2>Adding Interactivity</h2>
       <p>
         Buttons that don't do anything aren't particularly fun. Using
         Javascript, we can add in some interactivity.

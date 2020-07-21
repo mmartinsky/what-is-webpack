@@ -12,7 +12,7 @@ export default function Step4(props) {
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <h1>Play Rock Paper Scissors</h1>
+    <h2>Play Rock Paper Scissors</h2>
     <h3>Make a selection</h3>
     <div>
       <button id='rock'>Rock</button>
@@ -20,7 +20,7 @@ export default function Step4(props) {
       <button id='scissors'>Scissors</button>
     </div>
     <h3>Opponent Selection</h3>
-    <div id='opponent-selection'></div>
+    <div id='opponent-selection'>Make a Selection</div>
     <h2>Result</h2>
     <div id='result'></div>
   </body>

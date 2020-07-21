@@ -1,4 +1,4 @@
 body {
   width: min(calc(100% - 80px), 1000px);
-  margin: 20px auto;
+  margin: 20px auto !important;
 }
