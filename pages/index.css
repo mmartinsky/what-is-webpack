@@ -1,5 +1,5 @@
 body {
-  width: min(calc(100% - 40px), 1200px);
+  width: min(calc(100% - 40px), 1000px);
   margin: 20px auto !important;
 
   @media (max-width: 600px) {
@@ -27,7 +27,6 @@ span {
   top: 0;
   z-index: 100;
   padding: 10px;
-  background-color: transparent !important;
 }
 
 #__next {

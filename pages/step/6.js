@@ -115,11 +115,13 @@ button:hover {
         write enhanced CSS, and then compile it down for final distribution.
       </p>
       <p>
-        In this example we'll use <b>LESS</b>, but other popular options are
-        SASS or Stylus. All have some form of mixins, which allow you to
-        parameterize and reuse blocks of styles. You can even nest mixins within
-        other mixins! In a toy example like below, the savings are minimal, but
-        you can start to see significant benefits in larger applications.
+        In this example we'll use <a href="http://lesscss.org/">LESS</a>, but
+        other popular options are <a href="https://sass-lang.com/">SASS</a> or{" "}
+        <a href="https://stylus-lang.com/">Stylus</a>. All have some form of
+        mixins, which allow you to parameterize and reuse blocks of styles. You
+        can even nest mixins within other mixins! In a toy example like below,
+        the savings are minimal, but you can start to see significant benefits
+        in larger applications.
       </p>
       <CodeViewer tabs={tabs} />
       <p>

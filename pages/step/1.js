@@ -24,10 +24,10 @@ export default function Step1(props) {
     <div>
       <h1>What is a website?</h1>
       <p>
-        At its core, a website is just plain HTML. The web browser parses this
-        text and is responsible for rendering it. Let's use a skeleton for a
-        Rock Paper Scissors game as our example.
+        At its core, a website starts with plain HTML. The web browser parses
+        this text and is responsible for rendering it.
       </p>
+      <p>Let's use a skeleton for a Rock Paper Scissors game as our example.</p>
       <Content>
         <CodeViewer tabs={tabs} />
         <Iframe srcDoc={codeString} height={400} width="100%" />
