@@ -50,16 +50,15 @@ export default function Step2(props) {
     <div>
       <h1>HTML + CSS</h1>
       <p>
-        We can begin to add some styling to hook the players in our quest to
-        dethrone Minecraft.
+        We can begin to <b>add some styling</b> to hook our players in.
       </p>
       <Content>
         <CodeViewer tabs={tabs} />
         <Iframe srcDoc={codeString} height={400} width="100%" />
       </Content>
       <p>
-        Now it's looking a little better, but it's not very fun yet. Let's add
-        some interactivity.
+        Now it's looking a little better, but it's not very fun yet. Let's{" "}
+        <b>add some interactivity.</b>
       </p>
     </div>
   );

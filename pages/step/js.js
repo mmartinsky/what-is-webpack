@@ -95,16 +95,16 @@ export default function Step3(props) {
     <div>
       <h1>Adding Interactivity</h1>
       <p>
-        Buttons that don't do anything aren't particularly fun. Using
-        Javascript, we can add in some interactivity.
+        Buttons that don't do anything aren't particularly fun.{" "}
+        <b>Using JavaScript, we can add in some functionality.</b>
       </p>
       <Content>
         <CodeViewer tabs={tabs} />
         <Iframe srcDoc={codeString} height={400} width="100%" />
       </Content>
       <p>
-        We have a playable MVP! It's starting to get a bit unwieldy, so we'll
-        need to start splitting up these files.
+        We have a playable MVP! It's starting to get a bit unwieldy, so{" "}
+        <b>we'll need to start splitting up these files.</b>
       </p>
     </div>
   );

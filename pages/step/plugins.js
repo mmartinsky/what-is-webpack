@@ -36,10 +36,13 @@ module.exports = {
     <div>
       <h1>Plugins</h1>
       <p>
-        Webpack's rich plugin ecosystem is very powerful; much of the core
-        functionality we associate with it is actually composed of plugins
-        behind the scenes. Below, we'll run through a sample plugin
-        configuration with a few interesting / useful highlights.
+        Webpack's rich plugin ecosystem is very powerful;{" "}
+        <b>
+          much of the core functionality we associate with it is actually
+          composed of plugins behind the scenes
+        </b>
+        . Below, we'll run through a sample plugin configuration with a few
+        interesting / useful highlights.
       </p>
       <CodeViewer tabs={tabs} />
       <p>

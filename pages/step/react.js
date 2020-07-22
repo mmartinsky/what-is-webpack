@@ -154,30 +154,38 @@ ReactDOM.render( /*#__PURE__*/React.createElement(App, null), document.getElemen
     <div>
       <h1>React and JSX</h1>
       <p>
-        Looking at our app, we can see some discrete components forming - the
-        banner, option buttons, and result sections. In the future, we might
+        Looking at our app, <b>we can see some discrete components forming</b> -
+        the banner, option buttons, and result sections. In the future, we might
         want to add a Tic Tac Toe game to our site; if that's the case, we would
         want to reuse some of these building blocks in that module. Component
         based libraries and frameworks like React, Vue, and Angular are built on
-        this ideal - turning imperative script files into more functional,
-        reusable pieces of code.
+        this ideal -{" "}
+        <b>
+          turning imperative script files into more functional, reusable modules
+          of code.
+        </b>
       </p>
       <p>
-        While each have their own idiosyncracies, all are primarily used to
-        build single page applications. Using a virtual DOM, the framework
-        tracks the state of the application and can selectively re-render only
-        the portions that need updating. In contrast, each time you navigate to
-        a new page on this site (built using Next.js), it triggers a full page
-        reload.
-      </p>
-      <p>
-        Each of the below files is equivalent functionally - the first is using
-        plain Javascript, but it seems difficult to deal with. The second is
-        probably the most familiar, it uses a syntax called JSX that allows us
-        to write components in a manner that resembles HTML, using our custom
-        components like <CodeBlock>OptionButton</CodeBlock>. Finally, the last
-        tab holds the transpiled version - using a build step, the JSX gets
-        converted into plain Javascript for the browser.
+        Each of the below files is equivalent functionally:
+        <ul>
+          <li>
+            the first is using <b>plain JavaScript</b>, but it seems difficult
+            to deal with
+          </li>
+          <li>
+            The second is probably the most familiar, it uses a{" "}
+            <b>syntax called JSX</b> that allows us to write components in a
+            manner that resembles HTML, using our custom components like{" "}
+            <CodeBlock>OptionButton</CodeBlock>.
+          </li>
+          <li>
+            the last tab holds the transpiled version -{" "}
+            <b>
+              using a build step, the JSX gets converted into plain JavaScript
+            </b>{" "}
+            for the browser
+          </li>
+        </ul>
       </p>
       <CodeViewer tabs={tabs} height="400px" />
       <p>

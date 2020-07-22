@@ -12,7 +12,6 @@ const steps = [
   { name: "CSS", path: "css" },
   { name: "JS", path: "js" },
   { name: "Splitting", path: "splitting" },
-  { name: "Breather", path: "breather" },
   { name: "LESS", path: "less" },
   { name: "React", path: "react" },
   { name: "Scope", path: "scope" },

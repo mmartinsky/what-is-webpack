@@ -200,25 +200,29 @@ export function cube(x) {
     <div>
       <h1>Tree Shaking and Code Splitting</h1>
       <p>
-        One of the coolest things about webpack is that it creates a dependency
-        graph of your application, starting from an entry point. It will
-        traverse the imports required by that piece of code, and recursively do
-        the same until it identifies what exactly is needed to run the app.
+        One of the coolest things about webpack is that it creates a{" "}
+        <b>dependency graph of your application</b>, starting from an entry
+        point. It will traverse the imports required by that piece of code, and
+        recursively do the same until it identifies exactly what is needed to
+        run the app.
       </p>
       <p>
         In the previous example, the <CodeBlock>square</CodeBlock> function was
-        removed from the output bundle, because Webpack determined that we
-        weren't using it based on the dependency graph. If we instead run
-        Webpack in development mode,{" "}
+        removed from the output bundle, because{" "}
+        <b>
+          Webpack determined that we weren't using it based on the dependency
+          graph.
+        </b>{" "}
+        If we instead run Webpack in development mode,{" "}
         <CodeBlock>webpack --mode development</CodeBlock> tree shaking will be
-        disabled.
+        disabled and we can see our square function return.
       </p>
       <CodeViewer tabs={tabs} />
       <p>
         A common optimization is to use multiple entrypoints or dynamic imports
-        to create separate bundles for each portion of your app - if only one
-        page uses a heavy dependency like ag-grid or a charting library, you can
-        defer loading of that dependency until that portion is requested.
+        to <b>create separate bundles for each portion of your app</b> - if only
+        one page uses a heavy dependency like charting library, you can defer
+        loading of that dependency until that portion is requested.
       </p>
     </div>
   );

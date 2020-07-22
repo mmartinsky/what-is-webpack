@@ -24,8 +24,8 @@ export default function Step1(props) {
     <div>
       <h1>What is a website?</h1>
       <p>
-        At its core, a website starts with plain HTML. The web browser parses
-        this text and is responsible for rendering it.
+        At its core, <b>a website starts with plain HTML</b>. The web browser
+        parses this text and is responsible for rendering it.
       </p>
       <p>Let's use a skeleton for a Rock Paper Scissors game as our example.</p>
       <Content>
@@ -33,8 +33,8 @@ export default function Step1(props) {
         <Iframe srcDoc={codeString} height={400} width="100%" />
       </Content>
       <p>
-        Not very exciting, but it's a start. Let's add some styling to jazz it
-        up
+        Not very exciting, but it's a start. Let's <b>add some styling</b> to
+        jazz it up
       </p>
     </div>
   );

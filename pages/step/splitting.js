@@ -105,14 +105,27 @@ choices.forEach(function (choice) {
         Splitting our files makes it easier to deal with each in isolation, as
         well as making them more portable.
       </p>
+      <p>
+        This is certainly fully functional, and in some cases a more logical way
+        to build a simple informational site; frameworks like Angular can often
+        seem like the only option, but{" "}
+        <b>
+          writing good, semantic HTML and using the full slate of CSS can be
+          pretty powerful
+        </b>
+        .
+      </p>
+      <p>
+        That said - <b>some of the CSS we wrote was a little repetitive</b>, and
+        there are probably some pitfalls in the way we are{" "}
+        <b>loading the JavaScript files</b>. The next few pages will walk
+        through some of these pain points, and later on we'll look at how a
+        modern build tool like Webpack or Rollup can help remediate them.
+      </p>
       <Content>
         <CodeViewer tabs={tabs} />
         <Iframe srcDoc={combinedString} height={400} width="100%" />
       </Content>
-      <p>
-        Now our files are a bit more spread out, and should make interacting
-        with each much easier.
-      </p>
     </div>
   );
 }

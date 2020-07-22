@@ -55,7 +55,8 @@
   function (e, t, r) {
     "use strict";
     r.r(t);
-    const n = n(3);
+    const n = (o = 3) * o * o;
+    var o;
     console.log("Cube of 3 = ", n);
   },
 ]);

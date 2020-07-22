@@ -1,5 +1,6 @@
 import React from "react";
 import CodeViewer from "../../src/components/CodeViewer";
+import { CodeBlock } from "../../src/components/Styled";
 
 export default function Step10(props) {
   const configCodeString = `const path = require("path"); // import a utility for file traversal
@@ -33,22 +34,25 @@ module.exports = {
     <div>
       <h1>Configuration</h1>
       <p>
-        Let's answer the first question - unsurprisingly, Webpack is highly
-        configurable; but to aid in reducing a high learning curve, it has some
-        sensible defaults. It looks for an index.js file, and assumes that you
-        want to minify your code for productionization, and it outputs a file
-        named main.js.
+        Let's answer the first question - despite a high learning curve, Webpack
+        has some sensible defaults. It{" "}
+        <b>
+          looks for an <CodeBlock>index.js</CodeBlock> file
+        </b>
+        , assumes that you want to minify your code for productionization, and
+        outputs a file named <CodeBlock>main.js</CodeBlock>.
       </p>
       <p>
         But let's say that we wanted to customize this - maybe we want our
-        output to be named differently, or end up in a specific file location?
-        Below is a sample config file, annotated with the purpose of each block:
+        output to be named differently, or end up in a specific file location?{" "}
+        <b>Below is a sample config file</b>, annotated with the purpose of each
+        block:
       </p>
       <CodeViewer tabs={tabs} />
       <p>
         With hundreds of options, you can tweak and customize the bundling to
-        your heart's desire. Best of all, because the configuration is
-        JavaScript code rather than a static JSON file, you can use dynamic
+        your heart's desire. Best of all,{" "}
+        <b>the configuration is just JavaScript code;</b> you can use dynamic
         logic and even compose multiple webpack configs together.
       </p>
     </div>
