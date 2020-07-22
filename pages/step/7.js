@@ -1,8 +1,6 @@
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import Link from "next/link";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import CodeViewer from "../../src/components/CodeViewer";
 import { CodeBlock } from "../../src/components/Styled";
 
@@ -188,11 +186,6 @@ ReactDOM.render( /*#__PURE__*/React.createElement(App, null), document.getElemen
         <SyntaxHighlighter language="jsx" style={atomDark} showLineNumbers>
           {`<OptionButton name='X' onClick={setTicTacToeOption} />`}
         </SyntaxHighlighter>
-      </p>
-      <p>
-        We've again added in a build step for our app, and we also now run the
-        risk of introducing extra code into our project that can slow down our
-        page load times.
       </p>
     </div>
   );

@@ -1,9 +1,8 @@
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import Link from "next/link";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import CodeViewer from "../../src/components/CodeViewer";
+import { CodeBlock } from "../../src/components/Styled";
 
 export default function Step8(props) {
   const htmlCodeString = `<html>
@@ -26,10 +25,10 @@ export default function Step8(props) {
         One of the issues with the plain JS approach is that every function
         defined goes onto the global scope (aka the window object). In the below
         example, we've imported the React library into our app, which gets put
-        onto the window object as window.React. In the next script tag, however,
-        we've accidentally overwritted the React function with our own; when our
-        index.js script goes to use React, it will get our useless function
-        instead of the necessary imported one!
+        onto the window object as <CodeBlock>window.React</CodeBlock>. In the
+        next script tag, however, we've accidentally overwritten the React
+        function with our own; when our index.js script goes to use React, it
+        will get our useless function instead of the necessary imported one!
       </p>
       <CodeViewer tabs={tabs} height="300px" />
       <p>

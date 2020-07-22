@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import CodeViewer from "../../src/components/CodeViewer";
 import { Content, Iframe } from "../../src/components/Styled";
 
