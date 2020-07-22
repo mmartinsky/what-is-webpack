@@ -15,7 +15,7 @@ module.exports = {
   plugins: [
     // show progress of build as it continues
     new webpack.ProgressPlugin(), 
-    // generate index.html automatically and inject reference to the built bundle
+    // generate index.html automatically and inject a reference to the built bundle
     new HtmlWebpackPlugin({template: './src/index.html'}),  
     // copy directories to output (useful for files and reference data)
     new CopyPlugin({
@@ -45,7 +45,7 @@ module.exports = {
       <p>
         The BundleAnalyzerPlugin in particular is a great example of a plugin
         that doesn't directly modify code, but allows you to visualize and
-        pinpoint opportunities to reduce bundle size and improve the performance
+        identify opportunities to reduce bundle size and improve the performance
         of your app.
       </p>
       <img src="https://cloud.githubusercontent.com/assets/302213/20628702/93f72404-b338-11e6-92d4-9a365550a701.gif" />

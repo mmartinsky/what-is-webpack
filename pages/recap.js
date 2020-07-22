@@ -6,13 +6,15 @@ function Recap() {
       <h1>Recap and Further Reading</h1>
       <p>
         We've traced through the basics of the front end, and identified some
-        pain points using a simpler build process. As someone who entered front
-        end development as Webpack was really taking off, it's easy to get lost
-        in the layers of abstraction and forget the semantics of the web, at the
-        expense of things like accessibility. When you understand tools like
-        Webpack and eliminate some of the magic, we can improve both the
-        developer experience and the end user's experience through improved
-        performance.
+        pain points when using the bare basics. As someone who entered front end
+        development as Webpack was really taking off, it's easy to get lost in
+        the layers of abstraction and forget the semantics of the web, at the
+        expense of things like accessibility.
+      </p>
+      <p>
+        When we understand tools like Webpack and eliminate some of the magic,
+        we can improve both the developer experience and the end user's
+        experience through improved performance.
       </p>
       <hr />
       <p>

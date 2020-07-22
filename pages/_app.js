@@ -8,28 +8,32 @@ import StepLabel from "@material-ui/core/StepLabel";
 import { useRouter } from "next/router";
 
 const steps = [
-  "HTML",
-  "CSS",
-  "JS",
-  "Files",
-  "Breather",
-  "LESS",
-  "React",
-  "Global Scope",
-  "Webpack",
-  "Config",
-  "Tree Shaking",
-  "Loaders",
-  "Plugins",
+  { name: "HTML", path: "html" },
+  { name: "CSS", path: "css" },
+  { name: "JS", path: "js" },
+  { name: "Splitting", path: "splitting" },
+  { name: "Breather", path: "breather" },
+  { name: "LESS", path: "less" },
+  { name: "React", path: "react" },
+  { name: "Scope", path: "scope" },
+  { name: "Webpack", path: "webpack" },
+  { name: "Config", path: "config" },
+  { name: "Tree Shaking", path: "tree-shaking" },
+  { name: "Loaders", path: "loaders" },
+  { name: "Plugins", path: "plugins" },
 ];
 
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  let pageNum = +router.pathname.split("/")[2];
-  if (router.pathname === "/") {
+  let pageNum = steps.findIndex(
+    (x) => x.path === router.pathname.split("/")[2]
+  );
+  if (pageNum !== -1) {
+    pageNum++;
+  } else if (router.pathname === "/") {
     pageNum = 0;
   } else if (router.pathname === "/recap") {
-    pageNum = 14;
+    pageNum = 15;
   }
   return (
     <React.Fragment>
@@ -40,8 +44,8 @@ export default function MyApp({ Component, pageProps }) {
         </Step>
         {steps.map((step, i) => {
           return (
-            <Step key={step} onClick={() => router.push(`/step/${i + 1}`)}>
-              <StepLabel style={{ cursor: "pointer" }}>{step}</StepLabel>
+            <Step key={step} onClick={() => router.push(`/step/${step.path}`)}>
+              <StepLabel style={{ cursor: "pointer" }}>{step.name}</StepLabel>
             </Step>
           );
         })}

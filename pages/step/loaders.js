@@ -51,11 +51,11 @@ module.exports = {
       <p>
         In the CSS Preprocessing section, we explored how we can accelerate our
         styling output at the cost of adding a build step; with Webpack, we can
-        add loaders to convert code from one type into another. There are
-        loaders for pretty much anything you can think of: Typescript to
-        JavaScript, ES6 JavaScript to legacy style JavaScript, LESS to CSS, and
-        even loaders that allow you to import SVG images as first class React
-        components.
+        consolidate those build steps into a single command. In Webpack, loaders
+        convert code and assets from one format into another. There are loaders
+        for pretty much anything you can think of: Typescript to JavaScript, ES6
+        JavaScript to legacy style JavaScript, LESS to CSS, and even loaders
+        that allow you to convert SVG images to first class React components.
       </p>
       <CodeViewer tabs={tabs} />
       <p>

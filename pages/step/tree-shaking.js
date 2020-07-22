@@ -206,9 +206,10 @@ export function cube(x) {
         the same until it identifies what exactly is needed to run the app.
       </p>
       <p>
-        In the previous example, the square function was removed from the output
-        bundle, because Webpack determined that we weren't using it based on the
-        dependency graph. If we instead run Webpack in development mode,{" "}
+        In the previous example, the <CodeBlock>square</CodeBlock> function was
+        removed from the output bundle, because Webpack determined that we
+        weren't using it based on the dependency graph. If we instead run
+        Webpack in development mode,{" "}
         <CodeBlock>webpack --mode development</CodeBlock> tree shaking will be
         disabled.
       </p>
