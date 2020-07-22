@@ -1,5 +1,5 @@
 body {
-  width: min(calc(100% - 40px), 1000px);
+  width: min(calc(100% - 40px), 1200px);
   margin: 20px auto 40px !important;
 
   @media (max-width: 600px) {
