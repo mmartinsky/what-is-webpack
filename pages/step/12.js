@@ -4,6 +4,7 @@ import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Link from "next/link";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import CodeViewer from "../../src/components/CodeViewer";
+import { CodeBlock } from "../../src/components/Styled";
 
 export default function Step12(props) {
   const loaderConfigCodeString = ` const path = require('path');
@@ -64,8 +65,8 @@ module.exports = {
       <p>
         One interesting thing to note is the precedence order of the loaders
         used in a given rule - it works from right to left, meaning that{" "}
-        <code>['style-loader', 'css-loader']</code> is equivalent to{" "}
-        <code>style-loader(css-loader(file))</code>
+        <CodeBlock>['style-loader', 'css-loader']</CodeBlock> is equivalent to{" "}
+        <CodeBlock>style-loader(css-loader(file))</CodeBlock>
       </p>
     </div>
   );

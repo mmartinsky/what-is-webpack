@@ -1,13 +1,33 @@
 body {
   width: min(calc(100% - 40px), 1200px);
   margin: 20px auto !important;
+
+  @media (max-width: 600px) {
+    margin: 20px !important;
+  }
+
+  @media (max-width: 1000px) {
+    margin: 20px 30px !important;
+  }
 }
 
-.MuiStepper-horizontal {
+p,
+a,
+li,
+span {
+  font-size: 16px;
+}
+
+.code-block {
+  background-color: rgba(128, 128, 128, 0.1);
+}
+
+.MuiStepper-alternativeLabel {
   position: sticky;
   top: 0;
   z-index: 100;
   padding: 10px;
+  background-color: transparent;
 }
 
 #__next {

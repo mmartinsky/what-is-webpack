@@ -4,6 +4,7 @@ import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Link from "next/link";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import CodeViewer from "../../src/components/CodeViewer";
+import { CodeBlock } from "../../src/components/Styled";
 
 export default function Step11(props) {
   const indexJsCodeString = `import { cube } from "./math";
@@ -211,7 +212,8 @@ export function cube(x) {
         In the previous example, the square function was removed from the output
         bundle, because Webpack determined that we weren't using it based on the
         dependency graph. If we instead run Webpack in development mode,{" "}
-        <code>webpack --mode development</code> tree shaking will be disabled.
+        <CodeBlock>webpack --mode development</CodeBlock> tree shaking will be
+        disabled.
       </p>
       <CodeViewer tabs={tabs} />
       <p>

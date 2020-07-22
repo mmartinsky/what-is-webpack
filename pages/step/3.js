@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import CodeViewer from "../../src/components/CodeViewer";
 import { Content, Iframe } from "../../src/components/Styled";
 
@@ -94,7 +93,7 @@ export default function Step3(props) {
   const tabs = [{ name: "index.html", lang: "html", code: codeString }];
   return (
     <div>
-      <h2>Adding Interactivity</h2>
+      <h1>Adding Interactivity</h1>
       <p>
         Buttons that don't do anything aren't particularly fun. Using
         Javascript, we can add in some interactivity.

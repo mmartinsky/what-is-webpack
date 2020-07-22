@@ -4,6 +4,7 @@ import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Link from "next/link";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import CodeViewer from "../../src/components/CodeViewer";
+import { CodeBlock } from "../../src/components/Styled";
 
 export default function Step7(props) {
   const pureJsCodeString = `const React = require('react');
@@ -176,9 +177,9 @@ ReactDOM.render( /*#__PURE__*/React.createElement(App, null), document.getElemen
         plain Javascript, but it seems difficult to deal with. The second is
         probably the most familiar, it uses a syntax called JSX that allows us
         to write components in a manner that resembles HTML, using our custom
-        components like <code>OptionButton</code>. Finally, the last tab holds
-        the transpiled version - using a build step, the JSX gets converted into
-        plain Javascript for the browser.
+        components like <CodeBlock>OptionButton</CodeBlock>. Finally, the last
+        tab holds the transpiled version - using a build step, the JSX gets
+        converted into plain Javascript for the browser.
       </p>
       <CodeViewer tabs={tabs} height="400px" />
       <p>

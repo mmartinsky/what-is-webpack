@@ -48,7 +48,7 @@ export default function Step2(props) {
   const tabs = [{ name: "index.html", lang: "html", code: codeString }];
   return (
     <div>
-      <h2>HTML + CSS</h2>
+      <h1>HTML + CSS</h1>
       <p>
         We can begin to add some styling to hook the players in our quest to
         dethrone Minecraft.

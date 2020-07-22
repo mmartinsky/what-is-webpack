@@ -18,3 +18,7 @@ export const Iframe = styled.iframe`
     margin-top: 40px;
   }
 `;
+
+export const CodeBlock = styled.code`
+  background-color: rgba(128, 128, 128, 0.1);
+`;

@@ -37,19 +37,15 @@ function Recap() {
         </li>
         <li>
           <a href="https://rollupjs.org/guide/en/">
-            RollupJS - an alternative bundler. Many generally lean toward Rollup
-            for libraries, and Webpack for apps
-          </a>
+            RollupJS - an alternative bundler -
+          </a>{" "}
+          Many often lean toward Rollup for libraries, and Webpack for apps
         </li>
         <li>
           <a href="https://parceljs.org/">ParcelJS</a> - a zero configuration
-          bundler - doesnt have nearly as rich a plugin system, but great for
-          quick proof of concepts.
+          bundler, great for small apps
         </li>
       </ul>
-      <Link href="step/13">
-        <button>Prev</button>
-      </Link>
     </div>
   );
 }

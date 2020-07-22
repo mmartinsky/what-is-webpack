@@ -6,7 +6,6 @@ import Stepper from "@material-ui/core/Stepper";
 import Step from "@material-ui/core/Step";
 import StepLabel from "@material-ui/core/StepLabel";
 import { useRouter } from "next/router";
-import Link from "next/link";
 
 const steps = [
   "HTML",
@@ -26,11 +25,19 @@ const steps = [
 
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  const pageNum = router.pathname.split("/")[2];
+  let pageNum = +router.pathname.split("/")[2];
+  if (router.pathname === "/") {
+    pageNum = 0;
+  } else if (router.pathname === "/recap") {
+    pageNum = 14;
+  }
   return (
     <React.Fragment>
       <CssBaseline />
-      <Stepper alternativeLabel activeStep={+pageNum - 1}>
+      <Stepper alternativeLabel activeStep={pageNum}>
+        <Step key={"intro"} onClick={() => router.push(`/`)}>
+          <StepLabel style={{ cursor: "pointer" }}>Intro</StepLabel>
+        </Step>
         {steps.map((step, i) => {
           return (
             <Step key={step} onClick={() => router.push(`/step/${i + 1}`)}>
@@ -38,6 +45,9 @@ export default function MyApp({ Component, pageProps }) {
             </Step>
           );
         })}
+        <Step key={"recap"} onClick={() => router.push(`/recap`)}>
+          <StepLabel style={{ cursor: "pointer" }}>Recap</StepLabel>
+        </Step>
       </Stepper>
       <Component {...pageProps} />
     </React.Fragment>

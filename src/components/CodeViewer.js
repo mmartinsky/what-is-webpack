@@ -6,6 +6,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
 const Container = styled(Tabs)`
   width: 100%;
+  overflow: auto;
 `;
 export default function CodeViewer(props) {
   const { tabs, height } = props;

@@ -4,6 +4,7 @@ import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Link from "next/link";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import CodeViewer from "../../src/components/CodeViewer";
+import { CodeBlock } from "../../src/components/Styled";
 
 export default function Step9(props) {
   const indexJsCodeString = `import { cube } from "./math";
@@ -94,8 +95,8 @@ export function cube(x) {
         JavaScript interpreter.
       </p>
       <p>
-        Running the <code>webpack</code> command on the following directory
-        results in the main.js file.
+        Running the <CodeBlock>webpack</CodeBlock> command on the following
+        directory results in the main.js file.
       </p>
       <CodeViewer tabs={tabs} />
       <p>
