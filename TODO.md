@@ -1,9 +1,8 @@
 # TODO
 
+- responsive for mobile
 - put folders in
 - style the app and add prev / next footer
-- create a fixed progress tracker for easy navigation
-- extract the above into a common layout
 
 Pages
 
